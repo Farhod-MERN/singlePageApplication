@@ -1,13 +1,130 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+nav{
+  padding:  0 1rem;
 }
+.content{
+  min-height: calc(100vh - 70px - 64px);
+  padding: 1.5rem 0;
+  position: relative;
+}
+.list{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+}
+.input-field{
+  margin-top: 0 !important;
+}
+.card-title{
+  text-align: left;
+}
+.card{
+  display: flex;
+  flex-direction: column;
+}
+.card-content{
+  flex-grow: 1;
+}
+.margin-item{
+  margin-top: 10px;
+}
+.read-more{
+  cursor: pointer;
+  color: blue;
+}
+.card-reveal{
+  background-color: rgba(255, 255, 255, 0.9) !important;
+}
+.retsept{
+  margin-top: 40px;
+}
+.retsept img{
+  max-width: 100% !important;
+  margin-top: 1rem;
+  border-radius: 5px;
+}
+.show-btn{
+  margin-top: -10px;
+  cursor: pointer;
+}
+.category{
+display: none;
+} 
+.category-btn{
+  margin: 0;
+  padding: 0 7px;
+  /* background-color: transparent !important; */
+}
+.flex-div{
+  display: flex;
+  flex-direction: row;
+}
+.retsept img{
+  max-width: 30% !important;
+  margin-top: 1rem;
+  border-radius: 5px;
+  margin-left: 10px;
+}
+.footer-div{
+  display: flex;
+  justify-content: space-between;
+}
+p{
+  text-align: left;
+}
+.close-btn{
+  position: absolute;
+  top: 10px;
+  right: 75px;
+  cursor: pointer;
+  z-index: 100;
+  color: pink;
+}
+.nothing-div{
+  max-width: 400px;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+.nothing-div img{
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+.red{
+  padding: 20px;
+  text-transform: uppercase;
+}
+@media (max-width:420px) {
+  .category{
+    display: block;
+    position: fixed;
+    left: 10px;
+    top: 10px;
+    z-index: 5;
+  } 
+  .category-btn{
+    margin: 0;
+    padding: 0 7px;
+    /* background-color: transparent !important; */
+  } 
+  .flex-div{
+    display: flex;
+    flex-direction: column;
+  }
+  .retsept img{
+    max-width: 100% !important;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    margin-left: -2px;
+  }
+  .list{
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+  .nothing-div img{
+    width: 100%;
+    height: 100%;
+  }
 }
